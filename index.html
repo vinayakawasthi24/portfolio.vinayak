@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio - Vinayak Awasthi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PORTFOLIO.VINAYAK</div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Blog">Blog</a></li>
+                
+            </ul>
+        </nav>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>I am <span>Vinayak Awasthi</span></h1>
+                <p class="highlight">I'm a Frontend developer & Graphic designer</p>
+            </div>
+        </section>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Who am I ? <span class="highlight">Hello</span></h2>
+            <p>I'm <strong>Vinayak Awasthi</strong>, a passionate <strong>frontend web developer</strong> and <strong>graphic designer</strong>. I love crafting visually appealing and user-friendly designs that bring ideas to life.</p>
+            <p>Currently, I'm working as a <strong>designer for Anunad Magzine of UIT RGPV</strong>, where I blend creativity with technology to create engaging digital experiences.</p>
+            <p>My expertise lies in designing and developing modern web interfaces. Let's build something amazing together!</p>
+        </div>
+    </section>
+
+    <section id="works" class="portfolio">
+        <h2>My Work <span class="highlight">Awesome Projects</span></h2>
+        <div class="filter">
+            <button class="active">All</button>
+            <button onclick="window.location.href='work.html'">Magazines</button>
+            <button>Videos</button>
+            <button onclick="window.location.href='work.html'">Web</button>
+            <button>Personal Blog</button>
+        </div>
+       <!-- <div class="gallery">
+            <div class="item"><img src="image1.jpg" alt="Project"></div>
+            <div class="item"><img src="image2.jpg" alt="Project"></div>
+            <div class="item"><img src="image3.jpg" alt="Project"></div>
+            <div class="item"><img src="image4.jpg" alt="Project"></div>
+        </div>-->
+        <button class="load-more">Load More</button>
+    </section>
+
+    <script>
+        gsap.from(".hero-content", { opacity: 0, y: -50, duration: 1.5 });
+        gsap.from("nav ul li", { opacity: 0, y: -20, duration: 1, stagger: 0.2 });
+        gsap.from(".about-content", { opacity: 0, x: -50, duration: 1.5, scrollTrigger: "#about" });
+        gsap.from(".portfolio h2", { opacity: 0, y: 30, duration: 1.5, scrollTrigger: "#works" });
+        gsap.from(".gallery .item", { opacity: 0, scale: 0.8, duration: 1, stagger: 0.3, scrollTrigger: "#works" });
+    </script>
+</body>
+</html>
